@@ -1,0 +1,732 @@
+{
+    "#ifdef": {
+        "body": [
+            "<!-- #ifdef ${1|APP-PLUS,MP,MP-ALIPAY,MP-BAIDU,MP-WEIXIN,MP-QQ,H5|} -->",
+            "$0",
+            "<!-- #endif -->"
+        ],
+        "prefix": "ifdef",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "#ifndef": {
+        "body": [
+            "<!-- #ifndef ${1|APP-PLUS,MP,MP-ALIPAY,MP-BAIDU,MP-WEIXIN,MP-QQ,H5|} -->",
+            "$0",
+            "<!-- #endif -->"
+        ],
+        "prefix": "ifndef",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "Vue Base": {
+        "body": [
+            "<template>",
+            "\t<${1:div}>",
+            "",
+            "\t</${1:div}>",
+            "</template>",
+            "",
+            "<script>",
+            "\texport default {",
+            "\t\t${0}",
+            "\t}",
+            "</script>",
+            "",
+            "<style scoped>",
+            "",
+            "</style>"
+        ],
+        "description": "Base for Vue File",
+        "prefix": "vbase",
+        "scope": "vue-html"
+    },
+    "Vue Class Binding": {
+        "body": [
+            "<${1|div|} :class=\"{ ${2:className}: ${3:data} }\"><,${1:div}>"
+        ],
+        "description": "vue class binding",
+        "prefix": "vclass",
+        "scope": "vue-html"
+    },
+    "Vue Class Binding Object": {
+        "body": [
+            "<${1|div|} :class=\"[${2:classNameA}, ${3:classNameB}]\"><,${1:div}>"
+        ],
+        "description": "vue class binding",
+        "prefix": "vclass-obj",
+        "scope": "vue-html"
+    },
+    "Vue Component with Props Binding": {
+        "body": [
+            "<${1|component|} :${1:propName}=\"${0}\"><,${1:component}>"
+        ],
+        "description": "component element with props",
+        "prefix": "vel-props",
+        "scope": "vue-html"
+    },
+    "Vue Image Source Binding": {
+        "body": [
+            "<img :src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\"/>"
+        ],
+        "description": "image source binding",
+        "prefix": "vsrc",
+        "scope": "vue-html"
+    },
+    "Vue Multiple Conditional Class Bindings": {
+        "body": [
+            "<${1|div|} :class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\"><,${1:div}>"
+        ],
+        "description": "vue multiple conditional class bindings",
+        "prefix": "vclass-obj-mult",
+        "scope": "vue-html"
+    },
+    "Vue Nuxt Routing Link": {
+        "body": [
+            "<nuxt-link to=\"/${1:page}\">${1:page}</nuxt-link>"
+        ],
+        "description": "nuxt routing link",
+        "prefix": "vnuxtl",
+        "scope": "vue-html"
+    },
+    "Vue Style Binding": {
+        "body": [
+            "<${1|div|} :style=\"{ fontSize: ${2:data} + 'px' }\"><,${1:div}>"
+        ],
+        "description": "vue inline style binding",
+        "prefix": "vstyle",
+        "scope": "vue-html"
+    },
+    "Vue Style Binding Object": {
+        "body": [
+            "<${1|div|} :style=\"[${2:styleObjectA}, ${3:styleObjectB]}\"><,${1:div}>"
+        ],
+        "description": "vue inline style binding, objects",
+        "prefix": "vstyle-obj",
+        "scope": "vue-html"
+    },
+    "Vue Transition Component with JavaScript Hooks": {
+        "body": [
+            "<transition",
+            "\tmode=\"out-in\"",
+            "\t@before-enter=\"beforeEnter\"",
+            "\t@enter=\"enter\"",
+            "",
+            "\t@before-leave=\"beforeLeave\"",
+            "\t@leave=\"leave\"",
+            "\t:css=\"false\">",
+            "",
+            "</transition>"
+        ],
+        "description": "transition component js hooks",
+        "prefix": "vanim",
+        "scope": "vue-html"
+    },
+    "Vue v-for": {
+        "body": [
+            "<${1:div} v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\">",
+            "\t{{ ${2:item} }}",
+            "</${1:div}>"
+        ],
+        "description": "vfor statement",
+        "prefix": "vfor",
+        "scope": "vue-html"
+    },
+    "Vue v-model Directive": {
+        "body": [
+            "<input v-model=\"${1:data}\" type=\"text\" />"
+        ],
+        "description": "v-model directive",
+        "prefix": "vmodel",
+        "scope": "vue-html"
+    },
+    "Vue v-model Number Directive": {
+        "body": [
+            "<input v-model.number=\"${1:numData}\" type=\"number\" step=\"1\" />"
+        ],
+        "description": "v-model directive number input",
+        "prefix": "vmodel-num",
+        "scope": "vue-html"
+    },
+    "Vue v-on Shortcut Directive": {
+        "body": [
+            "@click=\"${1:handler}(${2:arg}, $event)\""
+        ],
+        "description": "v-on click handler with arguments",
+        "prefix": "von",
+        "scope": "vue-html"
+    },
+    "uAccordion": {
+        "body": [
+            "<view class=\"uni-list\">",
+            "\t<view class=\"uni-list-cell uni-collapse\" v-for=\"(item,index) in list$1\" :key=\"index\">",
+            "\t\t<view class=\"uni-list-cell-navigate uni-navigate-bottom\" :class=\"item.show ? 'uni-active' : ''\" @click=\"trigerCollapse$0(index)\">",
+            "\t\t\t折叠面板{{index}}",
+            "\t\t</view>",
+            "\t\t<view class=\"uni-collapse-content\" :class=\"item.show ? 'uni-active' : ''\">",
+            "\t\t\t<view class=\"page-pd\">",
+            "\t\t\t\t<view class=\"uni-h1\">hello uni-app</view>",
+            "\t\t\t\t<view class=\"uni-h2\">hello uni-app</view>",
+            "\t\t\t\t<view class=\"uni-h3\">hello uni-app</view>",
+            "\t\t\t</view>",
+            "\t\t</view>",
+            "\t</view>",
+            "</view>"
+        ],
+        "prefix": "uaccordion",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uAudio": {
+        "body": [
+            "<audio :src=\"$1\" :poster=\"$0\" :name=\"$2\" :author=\"$3\" :action=\"$4\" controls></audio>"
+        ],
+        "prefix": "uaudio",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uBadge": {
+        "body": [
+            "<uni-badge text=\"$1\" type=\"$2\"></uni-badge>"
+        ],
+        "prefix": "ubadge",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uButton": {
+        "body": [
+            "<button type=\"primary\">$1</button>"
+        ],
+        "prefix": "ubutton",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uCalendar": {
+        "body": [
+            "<uni-calendar lunar=\"\" @change=\"$1\" @to-click=\"$2\"></uni-calendar>"
+        ],
+        "prefix": "ucalendar",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uCard": {
+        "body": [
+            "<uni-card title=\"标题文字\" thumbnail=\"$1\" extra=\"额外信息$2\" note=\"Tips$3\">",
+            "\t内容主体，可自定义内容及样式$4",
+            "</uni-card>"
+        ],
+        "prefix": "ucard",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uCheckbox": {
+        "body": [
+            "<label class=\"checkbox\">",
+            "\t<checkbox value=\"$1\" checked= />$0",
+            "</label>"
+        ],
+        "prefix": "ucheckbox",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uCollapse": {
+        "body": [
+            "<uni-collapse @change=\"$1\">",
+            "\t<uni-collapse-item title=\"$2\">",
+            "\t\t内容$3",
+            "\t</uni-collapse-item>",
+            "</uni-collapse>"
+        ],
+        "prefix": "uCollapse",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uCountDown": {
+        "body": [
+            "<uni-countdown font-color=\"$1\" bgr-color=\"$2\" timer=\"$3\"></uni-countdown>"
+        ],
+        "prefix": "ucountdown",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uDrawer": {
+        "body": [
+            "<uni-drawer :visible=\"$1\">",
+            "\t<view style=\"padding:30upx;\">",
+            "\t\t$2",
+            "\t</view>",
+            "</uni-drawer>"
+        ],
+        "prefix": "uDrawer",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uEditor": {
+        "body": [
+            "<editor placeholder=\"$1\"></editor>"
+        ],
+        "prefix": "uEditor",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uForm": {
+        "body": [
+            "<form @submit=\"formSubmit\" @reset=\"formReset\">",
+            "\t<view class=\"section section_gap\">",
+            "\t\t<view class=\"section__title\">switch$1</view>",
+            "\t\t<switch name=\"switch\" />",
+            "\t</view>",
+            "\t<view class=\"section section_gap\">",
+            "\t\t<view class=\"section__title\">slider</view>",
+            "\t\t<slider name=\"slider\" show-value></slider>",
+            "\t</view>",
+            "\t<view class=\"section\">",
+            "\t\t<view class=\"section__title\">input</view>",
+            "\t\t<input name=\"input\" placeholder=\"please input here\" />",
+            "\t</view>",
+            "\t<view class=\"section section_gap\">",
+            "\t\t<view class=\"section__title\">radio</view>",
+            "\t\t<radio-group name=\"radio-group\">",
+            "\t\t<label>",
+            "\t\t\t<radio value=\"radio1\" />radio1</label>",
+            "\t\t<label>",
+            "\t\t\t<radio value=\"radio2\" />radio2</label>",
+            "\t\t</radio-group>",
+            "\t</view>",
+            "\t<view class=\"section section_gap\">",
+            "\t\t<view class=\"section__title\">checkbox</view>",
+            "\t\t<checkbox-group name=\"checkbox\">",
+            "\t\t\t<label>",
+            "\t\t\t\t<checkbox value=\"checkbox1\" />checkbox1</label>",
+            "\t\t\t<label>",
+            "\t\t\t\t<checkbox value=\"checkbox2\" />checkbox2</label>",
+            "\t\t</checkbox-group>",
+            "\t</view>",
+            "\t<view class=\"btn-area\">",
+            "\t\t<button formType=\"submit\">Submit</button>",
+            "\t\t<button formType=\"reset\">Reset</button>",
+            "\t</view>",
+            "</form>"
+        ],
+        "prefix": "uform",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uGrid": {
+        "body": [
+            "<uni-grid :data=\"$1\"></uni-grid>"
+        ],
+        "prefix": "ugrid",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uIcon": {
+        "body": [
+            "<uni-icon type=\"$1\"></uni-icon>"
+        ],
+        "prefix": "uicon",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uImage": {
+        "body": [
+            "<image src=\"$1\" mode=\"$2\">$0</image>"
+        ],
+        "prefix": "uimage",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uInput": {
+        "body": [
+            "<input type=\"text$1\" value=\"$0\" />"
+        ],
+        "prefix": "uinput",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uList": {
+        "body": [
+            "<uni-list>",
+            "\t<uni-list-item title=\"$1\" note=\"$2\"></uni-list-item>",
+            "\t<uni-list-item title=\"$3\" note=\"$4\"></uni-list-item>",
+            "</uni-list>"
+        ],
+        "prefix": "ulist",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uListMedia": {
+        "body": [
+            "<view class=\"uni-list\">",
+            "\t<view class=\"uni-list-cell\" hover-class=\"uni-list-cell-hover\" v-for=\"(item,index) in list$1\" :key=\"index\">",
+            "\t\t<view class=\"uni-media-list\">",
+            "\t\t\t<image class=\"uni-media-list-logo\" :src=\"item.img$2\"></image>",
+            "\t\t\t<view class=\"uni-media-list-body\">",
+            "\t\t\t\t<view class=\"uni-media-list-text-top\">{{item.title$3}}</view>",
+            "\t\t\t\t<view class=\"uni-media-list-text-bottom uni-ellipsis\">{{item.content$4}}</view>",
+            "\t\t\t</view>",
+            "\t\t</view>",
+            "\t</view>",
+            "</view>"
+        ],
+        "prefix": "ulistmedia",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uLoadMore": {
+        "body": [
+            "<uni-load-more :loadingType=\"$1\" :contentText=\"$2\"></uni-load-more>"
+        ],
+        "prefix": "uloadmore",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uMap": {
+        "body": [
+            "<map :latitude=\"$1\" :longitude=\"$0\"></map>"
+        ],
+        "prefix": "umap",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uNavBar": {
+        "body": [
+            "<uni-nav-bar left-icon=\"back\" left-text=\"返回\" right-text=\"菜单\" title=\"标题$1\"></uni-nav-bar>"
+        ],
+        "prefix": "unavbar",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uNavigator": {
+        "body": [
+            "<navigator url=\"$1\">$0</navigator>"
+        ],
+        "prefix": "unavigator",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uNoticeBar": {
+        "body": [
+            "<uni-notice-bar single=\"$1\" text=\"$2\"></uni-notice-bar>"
+        ],
+        "prefix": "uNoticeBar",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uNumberBox": {
+        "body": [
+            "<uni-number-box @change=\"$1\"></uni-number-box>"
+        ],
+        "prefix": "unumberbox",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uPagination": {
+        "body": [
+            "<uni-pagination title=\"$1\" show-icon=\"$2\" total=\"$3\" current=\"$4\"></uni-pagination>"
+        ],
+        "prefix": "uPagination",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uPicker": {
+        "body": [
+            "<picker mode=\"$1\" :range=\"$2\" @change=\"$3\">",
+            "\t<view>picker组件</view>",
+            "</picker>"
+        ],
+        "prefix": "upicker",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uPickerView": {
+        "body": [
+            "<picker-view indicator-style=\"height: 50px;\" :value=\"value$1\" @change=\"bindChange\">",
+            "\t<picker-view-column>",
+            "\t\t$0",
+            "\t</picker-view-column>",
+            "\t<picker-view-column>",
+            "\t\t$2",
+            "\t</picker-view-column>",
+            "\t<picker-view-column>",
+            "\t\t",
+            "\t</picker-view-column>",
+            "</picker-view>"
+        ],
+        "prefix": "upickerview",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uPopup": {
+        "body": [
+            "<uni-popup msg=\"$1\" :show=\"true$2\" type=\"middle$3\"></uni-popup>"
+        ],
+        "prefix": "upopup",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uProductList": {
+        "body": [
+            "<view class=\"uni-product-list\">",
+            "\t<view class=\"uni-product\" v-for=\"(product,index) in productList$1\" :key=\"index\">",
+            "\t\t<view class=\"image-view\">",
+            "\t\t\t<image v-if=\"renderImage\" class=\"uni-product-image\" :src=\"product.image\"></image>",
+            "\t\t</view>",
+            "\t\t<view class=\"uni-product-title\">{{product.title}}</view>",
+            "\t\t<view class=\"uni-product-price\">",
+            "\t\t\t<text class=\"uni-product-price-favour\">￥{{product.originalPrice}}</text>",
+            "\t\t\t<text class=\"uni-product-price-original\">￥{{product.favourPrice}}</text>",
+            "\t\t\t<text class=\"uni-product-tip\">{{product.tip}}</text>",
+            "\t\t</view>",
+            "\t</view>",
+            "</view>"
+        ],
+        "prefix": "uproductlist",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uProgress": {
+        "body": [
+            " <progress percent=\"$1\" show-info$0 />"
+        ],
+        "prefix": "uprogress",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uRadio": {
+        "body": [
+            "<label class=\"radio\">",
+            "\t<radio value=\"$1\" checked= />$0",
+            "</label>"
+        ],
+        "prefix": "uradio",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uRate": {
+        "body": [
+            "<uni-rate value=\"$1\"></uni-rate>"
+        ],
+        "prefix": "uRate",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uRichText": {
+        "body": [
+            "<rich-text :nodes=\"$1\"></rich-text>"
+        ],
+        "prefix": "urichtext",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uScrollView": {
+        "body": [
+            "<scroll-view scroll-y$1>",
+            "\t<view>$0</view>",
+            "\t<view></view>",
+            "\t<view></view>",
+            "\t<view></view>",
+            "</scroll-view>"
+        ],
+        "prefix": "uscrollview",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uSegmentedControl": {
+        "body": [
+            "<uni-segmented-control :current=\"current$1\" :values=\"$0\" @clickItem=\"$2\"></uni-segmented-control>",
+            "<view class=\"content\">",
+            "\t<view v-show=\"current === 0\">",
+            "\t\t选项卡1的内容",
+            "\t</view>",
+            "\t<view v-show=\"current === 1\">",
+            "\t\t选项卡2的内容",
+            "\t</view>",
+            "\t<view v-show=\"current === 2\">",
+            "\t\t选项卡3的内容",
+            "\t</view>",
+            "</view>"
+        ],
+        "prefix": "usegmentedcontrol",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uSlider": {
+        "body": [
+            "<slider @change=\"$1\" show-value$0/>"
+        ],
+        "prefix": "uslider",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uSteps": {
+        "body": [
+            "<uni-steps :options=\"$1\" :active=\"0$2\"></uni-steps>"
+        ],
+        "prefix": "usteps",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uSwipeAction": {
+        "body": [
+            "<uni-swipe-action :options=\"$1\">",
+            "\t$2",
+            "</uni-swipe-action>"
+        ],
+        "prefix": "uSwipeAction",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uSwiper": {
+        "body": [
+            "<swiper :indicator-dots=\"true\" :autoplay=\"true\" :interval=\"3000\" :duration=\"1000\">",
+            "\t<swiper-item>",
+            "\t\t<view class=\"swiper-item\">$1</view>",
+            "\t</swiper-item>",
+            "\t<swiper-item>",
+            "\t\t<view class=\"swiper-item\">$2</view>",
+            "\t</swiper-item>",
+            "\t<swiper-item>",
+            "\t\t<view class=\"swiper-item\">$0</view>",
+            "\t</swiper-item>",
+            "</swiper>"
+        ],
+        "prefix": "uswiper",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uSwipermsg": {
+        "body": [
+            "<view class=\"uni-swiper-msg\">",
+            "\t<view class=\"uni-swiper-msg-icon\">",
+            "\t\t<image src=\"$1\" mode=\"widthFix\"></image>",
+            "\t</view>",
+            "\t<swiper vertical=\"true\" autoplay=\"true\" circular=\"true\" interval=\"3000\">",
+            "\t\t<swiper-item>",
+            "\t\t\t<navigator>消息1</navigator>",
+            "\t\t</swiper-item>",
+            "\t\t<swiper-item>",
+            "\t\t\t<navigator>消息2</navigator>",
+            "\t\t</swiper-item>",
+            "\t\t<swiper-item>",
+            "\t\t\t<navigator>消息3</navigator>",
+            "\t\t</swiper-item>",
+            "\t</swiper>",
+            "</view>"
+        ],
+        "prefix": "uswipermsg",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uSwitch": {
+        "body": [
+            "<switch checked @change=\"$1\" />"
+        ],
+        "prefix": "uswitch",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uTag": {
+        "body": [
+            "<uni-tag text=\"$1\" type=\"$2\"></uni-tag>"
+        ],
+        "prefix": "utag",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uTemplate": {
+        "body": [
+            "<template>",
+            "\t<view>$0</view>",
+            "</template>"
+        ],
+        "prefix": "utemplate",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uText": {
+        "body": [
+            "<text>$0</text>"
+        ],
+        "prefix": "utext",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uTextarea": {
+        "body": [
+            "<textarea value=\"$1\" placeholder=\"$0\" />"
+        ],
+        "prefix": "utextarea",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uTimeline": {
+        "body": [
+            "<view class=\"uni-timeline\">",
+            "\t<view class=\"uni-timeline-item uni-timeline-first-item\">",
+            "\t\t<view class=\"uni-timeline-item-keynode\">日期1$1</view>",
+            "\t\t<view class=\"uni-timeline-item-divider\"></view>",
+            "\t\t<view class=\"uni-timeline-item-content\">事件1</view>",
+            "\t</view>",
+            "\t<view class=\"uni-timeline-item\">",
+            "\t\t<view class=\"uni-timeline-item-keynode\">日期2</view>",
+            "\t\t<view class=\"uni-timeline-item-divider\"></view>",
+            "\t\t<view class=\"uni-timeline-item-content\">事件2</view>",
+            "\t</view>",
+            "\t<view class=\"uni-timeline-item uni-timeline-last-item\">",
+            "\t\t<view class=\"uni-timeline-item-keynode\">日期3</view>",
+            "\t\t<view class=\"uni-timeline-item-divider\"></view>",
+            "\t\t<view class=\"uni-timeline-item-content\">事件3</view>",
+            "\t</view>",
+            "</view>"
+        ],
+        "prefix": "utimeline",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uVideo": {
+        "body": [
+            "<video src=\"$1\" controls></video>"
+        ],
+        "prefix": "uvideo",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uView": {
+        "body": [
+            "<view class=\"$1\">$0</view>"
+        ],
+        "prefix": "uview",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "uWebView": {
+        "body": [
+            "<web-view src=\"$1\"></web-view>"
+        ],
+        "prefix": "uwebview",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "view for": {
+        "body": [
+            "<view v-for=\"(item,index) in ${1:dataList}\" :key=\"index\">",
+            "\t$0",
+            "</view>"
+        ],
+        "description": "view带for循环",
+        "prefix": "viewfor",
+        "project": "uni-app",
+        "scope": "vue-html"
+    },
+    "view_class": {
+        "body": [
+            "<view class=\"$1\">",
+            "\t$0",
+            "</view>"
+        ],
+        "prefix": "viewclass",
+        "scope": "vue-html",
+        "triggerAssist": true
+    }
+}

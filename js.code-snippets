@@ -1,0 +1,2055 @@
+{
+    "#ifdef": {
+        "body": [
+            "// #ifdef ${1|APP-PLUS,APP-PLUS-NVUE,MP,MP-ALIPAY,MP-BAIDU,MP-WEIXIN,MP-QQ,H5|}",
+            "$0",
+            "// #endif"
+        ],
+        "prefix": "ifdef",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "#ifndef": {
+        "body": [
+            "// #ifndef ${1|APP-PLUS,APP-PLUS-NVUE,MP,MP-ALIPAY,MP-BAIDU,MP-WEIXIN,MP-QQ,H5|}",
+            "$0",
+            "// #endif"
+        ],
+        "prefix": "ifndef",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "$ (document.getElementById)": {
+        "body": [
+            "document.getElementById(\"$1\")"
+        ],
+        "prefix": "$$$",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "$(\"\")": {
+        "body": [
+            "$(\"$1\")"
+        ],
+        "prefix": "dl",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "$(\"#\")": {
+        "body": [
+            "$(\"#$1\")"
+        ],
+        "prefix": "dlid",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "$(\".\")": {
+        "body": [
+            "$(\".$1\")"
+        ],
+        "prefix": "dlclass",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "@alias": {
+        "body": [
+            "@alias $0"
+        ],
+        "prefix": "@alias",
+        "scope": "comment.block.js"
+    },
+    "@description": {
+        "body": [
+            "@description $0"
+        ],
+        "prefix": "@description",
+        "scope": "comment.block.js"
+    },
+    "@event": {
+        "body": [
+            "@event {Function(${1})} ${2:name} $0"
+        ],
+        "prefix": "@event",
+        "scope": "comment.block.js"
+    },
+    "@example": {
+        "body": [
+            "@example $0"
+        ],
+        "prefix": "@example",
+        "scope": "comment.block.js"
+    },
+    "@extends": {
+        "body": [
+            "@extends {${1:parent_type}}"
+        ],
+        "prefix": "@extends",
+        "scope": "comment.block.js"
+    },
+    "@param": {
+        "body": [
+            "@param {${1:type}} ${2:$FN_PARAMS} $0"
+        ],
+        "prefix": "@param",
+        "scope": "comment.block.js"
+    },
+    "@param with values": {
+        "body": [
+            "@param {${1:type}} ${2:$FN_PARAMS} = [${3:value}] $0"
+        ],
+        "prefix": "@paramvalues",
+        "scope": "comment.block.js"
+    },
+    "@property": {
+        "body": [
+            "@property {${1:type}} ${2:prop_name} $0"
+        ],
+        "prefix": "@property",
+        "scope": "comment.block.js"
+    },
+    "@property with values": {
+        "body": [
+            "@property {${1:type}} ${2:prop_name} = [${3:value}] $0"
+        ],
+        "prefix": "@propertyvalues",
+        "scope": "comment.block.js"
+    },
+    "@return": {
+        "body": [
+            "@return {${1:type}}"
+        ],
+        "prefix": "@return",
+        "scope": "comment.block.js"
+    },
+    "@tutorial": {
+        "body": [
+            "@tutorial ${1:url}"
+        ],
+        "prefix": "@tutorial",
+        "scope": "comment.block.js"
+    },
+    "@type": {
+        "body": [
+            "@type {${1:type}}"
+        ],
+        "prefix": "@type",
+        "scope": "comment.doc.js"
+    },
+    "Arrow function": {
+        "body": [
+            "($1) => {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "arrow",
+        "scope": "typescript,javascript"
+    },
+    "Class": {
+        "body": [
+            "class ${1:name} {",
+            "\tconstructor(${2:arg}) {",
+            "\t\t$0",
+            "\t}",
+            "\t",
+            "}"
+        ],
+        "prefix": "class",
+        "scope": "typescript,javascript"
+    },
+    "Class Extends": {
+        "body": [
+            "class ${1:name} extends ${2:AnotherClass} {",
+            "\tconstructor(${3:arg}) {",
+            "\t\t$0",
+            "\t}",
+            "\t",
+            "}"
+        ],
+        "prefix": "classextends",
+        "scope": "typescript,javascript"
+    },
+    "Decrementer": {
+        "body": [
+            "return ${1:this.num} -= ${2:1}"
+        ],
+        "description": "decrement",
+        "prefix": "vdec",
+        "scope": "typescript,javascript"
+    },
+    "Export": {
+        "body": [
+            "export ${1:default} ${2:bar}"
+        ],
+        "prefix": "export",
+        "scope": "typescript,javascript"
+    },
+    "Export Class": {
+        "body": [
+            "export class ${1:name} {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "exportclass",
+        "scope": "typescript,javascript"
+    },
+    "Getter": {
+        "body": [
+            "get ${1:name}() {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "getter",
+        "scope": "JS_INCLASSBODY"
+    },
+    "Import": {
+        "body": [
+            "import ${1:foo} from \"${2:bar}\""
+        ],
+        "prefix": "imfrom",
+        "scope": "typescript,javascript"
+    },
+    "Incrementer": {
+        "body": [
+            "return ${1:this.num} += ${2:1}"
+        ],
+        "description": "increment",
+        "prefix": "vinc",
+        "scope": "typescript,javascript"
+    },
+    "Key:Value": {
+        "body": [
+            "${1:key} : ${2:value},"
+        ],
+        "prefix": "kv",
+        "scope": "object.property.js"
+    },
+    "Object Method": {
+        "body": [
+            "${1:method_name}: function(${2:attribute}){",
+            "\t$0",
+            "}${3:,}"
+        ],
+        "prefix": ":f",
+        "scope": "typescript,javascript"
+    },
+    "Object Method String": {
+        "body": [
+            "'${1:${2:#thing}:${3:click}}': function(element){",
+            "\t$0",
+            "}${4:,}"
+        ],
+        "prefix": ":f",
+        "scope": "typescript,javascript"
+    },
+    "Object Value JS": {
+        "body": [
+            "${1:value_name}:${0:value},"
+        ],
+        "prefix": ":,",
+        "scope": "typescript,javascript"
+    },
+    "Object key - key: \"value\"": {
+        "body": [
+            "${1:key}: ${2:\"${3:value}\"}${4:, }"
+        ],
+        "prefix": ":",
+        "scope": "typescript,javascript"
+    },
+    "Prototype": {
+        "body": [
+            "${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {",
+            "\t${0|,, body...|}",
+            "};"
+        ],
+        "prefix": "proto",
+        "scope": "typescript,javascript"
+    },
+    "Setter": {
+        "body": [
+            "set ${1:property}(${2:value}) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "setter",
+        "scope": "class.body.js"
+    },
+    "Unit Test": {
+        "body": [
+            "import Vue from 'vue'",
+            "import ${1|HelloWorld|} from '.,components,${1:HelloWorld}'",
+            "",
+            "describe('${1:HelloWorld}.vue', () => {",
+            "\tit('${2:should render correct contents}', () => {",
+            "\t\tconst Constructor = Vue.extend(${1:HelloWorld})",
+            "\t\tconst vm = new Constructor().$mount()",
+            "\t\texpect(vm.$el.querySelector('.hello h1').textContent)",
+            "\t\t\t.to.equal(${3:'Welcome to Your Vue.js App'})",
+            "\t})",
+            "})"
+        ],
+        "description": "unit test component",
+        "prefix": "vtest",
+        "scope": "typescript,javascript"
+    },
+    "Vue Commit Vuex Store in Methods": {
+        "body": [
+            "${1:mutationName}() {",
+            "\tthis.\\$store.commit('${1:mutationName}', ${2:payload})",
+            "}"
+        ],
+        "description": "commit to vuex store in methods for mutation",
+        "prefix": "vcommit",
+        "scope": "vue.property.js"
+    },
+    "Vue Components": {
+        "body": [
+            "components: {",
+            "\t$1",
+            "},"
+        ],
+        "description": "注册vue组件",
+        "prefix": "vcomponents",
+        "scope": "vue.property.js"
+    },
+    "Vue Computed": {
+        "body": [
+            "computed: {",
+            "\t${1:name}() {",
+            "\t\treturn this.${2:data} ${0}",
+            "\t}",
+            "},"
+        ],
+        "description": "computed value",
+        "prefix": "vcomputed",
+        "scope": "vue.property.js"
+    },
+    "Vue Custom Directive": {
+        "body": [
+            "Vue.directive('${1:directiveName}', {",
+            "\tbind(el, binding, vnode) {",
+            "\t\tel.style.${2:arg} = binding.value.${2:arg};",
+            "\t}",
+            "});"
+        ],
+        "description": "vue custom directive",
+        "prefix": "vc-direct",
+        "scope": "typescript,javascript"
+    },
+    "Vue Data": {
+        "body": [
+            "data() {",
+            "\treturn {",
+            "\t\t${1:key}: ${2:value}",
+            "\t}",
+            "},"
+        ],
+        "description": "Vue Component Data",
+        "prefix": "vdata",
+        "scope": "vue.property.js"
+    },
+    "Vue Dispatch Vuex Store in Methods": {
+        "body": [
+            "${1:actionName}() {",
+            "\tthis.\\$store.dispatch('${1:actionName}', ${2:payload})",
+            "}"
+        ],
+        "description": "dispatch to vuex store in methods for action",
+        "prefix": "vdispatch",
+        "scope": "vue.property.js"
+    },
+    "Vue Filter": {
+        "body": [
+            "filters: {",
+            "\t${1:fnName}: function(${2:value}) {",
+            "\t\treturn ${2:value}${0};",
+            "\t}",
+            "}"
+        ],
+        "description": "vue filter",
+        "prefix": "vfilter",
+        "scope": "vue.property.js"
+    },
+    "Vue Import Export": {
+        "body": [
+            "import ${1|Name|} from '.,components,${1:Name}.vue'",
+            "",
+            "export default {",
+            "\tcomponents: {",
+            "\t\t${1:Name}",
+            "\t},",
+            "}"
+        ],
+        "description": "import a component and include it in export default",
+        "prefix": "vimport-export",
+        "scope": "typescript,javascript"
+    },
+    "Vue Import File": {
+        "body": [
+            "import ${1|New|} from ',components,${1:New}.vue';"
+        ],
+        "description": "Import one component into another",
+        "prefix": "vimport",
+        "scope": "typescript,javascript"
+    },
+    "Vue Import GSAP": {
+        "body": [
+            "import { TimelineMax, ${1:Ease} } from 'gsap'"
+        ],
+        "description": "component methods options that dispatch an action from vuex store.",
+        "prefix": "vimport-gsap",
+        "scope": "typescript,javascript"
+    },
+    "Vue Import Library": {
+        "body": [
+            "import { ${1:libName} } from '${1:libName}'"
+        ],
+        "description": "import a library",
+        "prefix": "vimport-lib",
+        "scope": "typescript,javascript"
+    },
+    "Vue Import into the Component": {
+        "body": [
+            "components: {",
+            "\t${1:New},",
+            "}"
+        ],
+        "description": "Import one component into another, within export statement",
+        "prefix": "vcomponents",
+        "scope": "typescript,javascript"
+    },
+    "Vue Methods": {
+        "body": [
+            "methods: {",
+            "\t${1:name}() {",
+            "\t\t${0}",
+            "\t}",
+            "},"
+        ],
+        "description": "vue method",
+        "prefix": "vmethod",
+        "scope": "vue.property.js"
+    },
+    "Vue Mixin": {
+        "body": [
+            "const ${1:mixinName} = {",
+            "\tmounted() {",
+            "\t\tconsole.log('hello from mixin!')",
+            "\t},",
+            "}"
+        ],
+        "description": "vue mixin",
+        "prefix": "vmixin",
+        "scope": "typescript,javascript"
+    },
+    "Vue Props with Default": {
+        "body": [
+            "props: {",
+            "\t${1:propName}: {",
+            "\t\ttype: ${2:Number},",
+            "\t\tdefault: ${0}",
+            "\t},",
+            "},"
+        ],
+        "description": "Vue Props with Default",
+        "prefix": "vprops",
+        "scope": "vue.property.js"
+    },
+    "Vue Transition Methods with JavaScript Hooks": {
+        "body": [
+            "beforeEnter(el) {",
+            "\tconsole.log('beforeEnter');",
+            "},",
+            "enter(el, done) {",
+            "\tconsole.log('enter');",
+            "\tdone();",
+            "},",
+            "beforeLeave(el) {",
+            "\tconsole.log('beforeLeave');",
+            "},",
+            "leave(el, done) {",
+            "\tconsole.log('leave');",
+            "\tdone();",
+            "},"
+        ],
+        "description": "transition component js hooks",
+        "prefix": "vanimhook-js",
+        "scope": "typescript,javascript"
+    },
+    "Vue Use Mixin": {
+        "body": [
+            "mixins: [${1:mixinName}]"
+        ],
+        "description": "vue use mixin",
+        "prefix": "vmixin-use",
+        "scope": "typescript,javascript"
+    },
+    "Vue Watchers": {
+        "body": [
+            "watch: {",
+            "\t${1:data}(${2:newValue}, ${3:oldValue}) {",
+            "\t\t${0}",
+            "\t}",
+            "},"
+        ],
+        "description": "vue watcher",
+        "prefix": "vwatcher",
+        "scope": "vue.property.js"
+    },
+    "clog": {
+        "body": [
+            "console.log($1);"
+        ],
+        "description": "打印变量",
+        "prefix": "clog",
+        "scope": "typescript,javascript"
+    },
+    "clogios": {
+        "body": [
+            "console.log(JSON.stringify(${1:e}));",
+            "console.log('${2:e}');"
+        ],
+        "prefix": "cloios",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "clogjson": {
+        "body": [
+            "console.log(\"$1: \" + JSON.stringify($1));"
+        ],
+        "description": "打印JSON字符串",
+        "prefix": "clogjson",
+        "scope": "typescript,javascript"
+    },
+    "clogvar": {
+        "body": [
+            "console.log(\"$1: \" + $1);"
+        ],
+        "description": "打印变量",
+        "prefix": "clogvar",
+        "scope": "typescript,javascript"
+    },
+    "console.dir": {
+        "body": [
+            "console.dir($1)"
+        ],
+        "prefix": "cdir",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "console.log();": {
+        "body": [
+            "console.log($1);"
+        ],
+        "prefix": "clog",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "constructor": {
+        "body": [
+            "constructor(${1:arg}) {",
+            "    $0",
+            "}"
+        ],
+        "prefix": "cons",
+        "scope": "class.body.js"
+    },
+    "document.getElementById": {
+        "body": [
+            "document.getElementById(\"$1\")"
+        ],
+        "prefix": "dg",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "document.querySelectorAll": {
+        "body": [
+            "document.querySelectorAll(\"$1\")"
+        ],
+        "prefix": "dqs",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "document.write": {
+        "body": [
+            "document.write(\"$1\")"
+        ],
+        "prefix": "dw",
+        "scope": "typescript,javascript"
+    },
+    "documentaddEventListener": {
+        "body": [
+            "document.addEventListener('${1:scroll}',function ($2) {",
+            "        $0",
+            "})"
+        ],
+        "prefix": "dad",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "export default": {
+        "body": [
+            "export default {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "edefault",
+        "scope": "typescript,javascript"
+    },
+    "for (...) {...}": {
+        "body": [
+            "for ($1) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "forr",
+        "scope": "typescript,javascript"
+    },
+    "for let": {
+        "body": [
+            "for (let i = 0; i < ${1:Things}.length; i++) {",
+            "\t${1:Things}[i]",
+            "}"
+        ],
+        "prefix": "forl",
+        "scope": "typescript,javascript"
+    },
+    "for let in": {
+        "body": [
+            "for (let ${1:var1} in ${2:var2}) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "forli",
+        "scope": "typescript,javascript"
+    },
+    "for...of": {
+        "body": [
+            "for (let ${1:s} of ${2:sequence}) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "forof",
+        "scope": "typescript,javascript"
+    },
+    "fori": {
+        "body": [
+            "for (var i = 0; i < ${1:Things}.length; i++) {",
+            "\t${1:Things}[i]",
+            "}"
+        ],
+        "prefix": "fori",
+        "scope": "typescript,javascript"
+    },
+    "function": {
+        "body": [
+            "function ${1:function_name} ($2) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "funn",
+        "scope": "typescript,javascript"
+    },
+    "function*": {
+        "body": [
+            "function* ${1:name}($2) {",
+            "\tyield $0;",
+            "}"
+        ],
+        "prefix": "fung",
+        "scope": "typescript,javascript"
+    },
+    "function_anonymous": {
+        "body": [
+            "function ($1) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "funan",
+        "scope": "typescript,javascript"
+    },
+    "function_closures": {
+        "body": [
+            "(function ($1) {",
+            "\t$0",
+            "})($2)"
+        ],
+        "prefix": "funcl",
+        "scope": "typescript,javascript"
+    },
+    "getElementByIdaddEventListener": {
+        "body": [
+            "document.getElementById('$1').addEventListener('${2:tap}',function ($3) {",
+            "        $0",
+            "})"
+        ],
+        "prefix": "dga",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "if": {
+        "body": [
+            "if ($1) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "iff",
+        "scope": "typescript,javascript"
+    },
+    "if ... else": {
+        "body": [
+            "if ($1) {",
+            "\t$0",
+            "} else{",
+            "\t",
+            "}"
+        ],
+        "prefix": "ife",
+        "scope": "typescript,javascript"
+    },
+    "ifAndroid": {
+        "body": [
+            "if (uni.getSystemInfoSync().platform == \"android\") {",
+            "\t$1",
+            "}"
+        ],
+        "prefix": "ifandroid",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "if_compare": {
+        "body": [
+            "if ($1 == ${2:true}) {",
+            "\t$0",
+            "} else{",
+            "\t",
+            "}"
+        ],
+        "prefix": "ifc",
+        "scope": "typescript,javascript"
+    },
+    "ifiOS": {
+        "body": [
+            "if (uni.getSystemInfoSync().platform == \"ios\") {",
+            "\t$1",
+            "}"
+        ],
+        "prefix": "ifios",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "module.exports": {
+        "body": [
+            "module.exports = {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "mexports",
+        "scope": "typescript,javascript"
+    },
+    "mui": {
+        "body": [
+            "mui."
+        ],
+        "prefix": "mui",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui('').pullRefresh": {
+        "body": [
+            "mui('#${1:refreshContainer}').pullRefresh().$2"
+        ],
+        "prefix": "mmpullrefresh",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui('').scroll": {
+        "body": [
+            "mui('.${1:mui-scroll-wrapper}').scroll({$2})$0"
+        ],
+        "prefix": "mmscroll",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui('').slider": {
+        "body": [
+            "mui('.${1:mui-slider}').slider({$2})$0"
+        ],
+        "prefix": "mmslider",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui()": {
+        "body": [
+            "mui('$1')"
+        ],
+        "prefix": "mmui",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui().each()": {
+        "body": [
+            "mui('$1').each(function (${3:index},${4:element}) {",
+            "\t$0",
+            "})"
+        ],
+        "prefix": "mmeach",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.ajax()": {
+        "body": [
+            "mui.ajax('$1',{",
+            "\tdata:{",
+            "\t\t$2",
+            "\t},",
+            "\tdataType:'${3:json}',//服务器返回json格式数据",
+            "\ttype:'${4:post}',//HTTP请求类型",
+            "\ttimeout:${5:10000},//超时时间设置为10秒；",
+            "\tsuccess:function(${6:data}){",
+            "\t\t$7",
+            "\t},",
+            "\terror:function(${8:xhr,type,errorThrown}){",
+            "\t\t$9",
+            "\t}",
+            "});$0"
+        ],
+        "prefix": "majax",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.alert()": {
+        "body": [
+            "mui.alert('${1:message}','${2:title}','${3:btnValue}',function (${4:e}) {",
+            "   ${4:e}.index$0",
+            "}${5:,'div'})"
+        ],
+        "prefix": "mdalert",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.back()(返回上级页面)": {
+        "body": [
+            "mui.back()$0"
+        ],
+        "prefix": "mback",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.backDouble(双击退出应用)": {
+        "body": [
+            "//首页返回键处理",
+            "//处理逻辑：1秒内，连续两次按返回键，则退出应用；",
+            "var first = null;",
+            "mui.back = function() {",
+            "\t//首次按键，提示‘再按一次退出应用’",
+            "\tif (!first) {",
+            "\t\tfirst = new Date().getTime();",
+            "\t\tmui.toast('再按一次退出应用');",
+            "\t\tsetTimeout(function() {",
+            "\t\t\tfirst = null;",
+            "\t\t}, 1000);",
+            "\t} else {",
+            "\t\tif (new Date().getTime() - first < 1000) {",
+            "\t\t\tplus.runtime.quit();",
+            "\t\t}",
+            "\t}",
+            "};"
+        ],
+        "prefix": "mbackDouble",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.backFunction(重写返回逻辑)": {
+        "body": [
+            "mui.back=function () {",
+            "    $0\t",
+            "}"
+        ],
+        "prefix": "mbackfunction",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.backTask(双击进入后台)": {
+        "body": [
+            "//首页返回键处理",
+            "//处理逻辑：1秒内，连续两次按返回键，则进入后台；",
+            "var first = null;",
+            "mui.back = function() {",
+            "\t//首次按键，提示‘再按一次退出应用’",
+            "\tif (!first) {",
+            "\t\tfirst = new Date().getTime();",
+            "\t\tmui.toast('再按一次退出应用');",
+            "\t\tsetTimeout(function() {",
+            "\t\t\tfirst = null;",
+            "\t\t}, 1000);",
+            "\t} else {",
+            "\t\tif (new Date().getTime() - first < 1000) {",
+            "\t\t\tvar main = plus.android.runtimeMainActivity();",
+            "            main.moveTaskToBack(false);",
+            "\t\t}",
+            "\t}",
+            "};"
+        ],
+        "prefix": "mbackMoveTaskToBack",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.closePopup()": {
+        "body": [
+            "mui.closePopup()$0"
+        ],
+        "prefix": "mdclosePopup",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.closePopups()": {
+        "body": [
+            "mui.closePopups()$0"
+        ],
+        "prefix": "mdclosePopups",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.confirm()": {
+        "body": [
+            "mui.confirm('${1:message}','${2:title}',['${3:取消}','${4:确认}'],function (${5:e}) {",
+            "\t${5:e}.index$0",
+            "}${6:,'div'})"
+        ],
+        "prefix": "mdconfirm",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.currentWebview": {
+        "body": [
+            "mui.currentWebview."
+        ],
+        "prefix": "mcurrent",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.each()": {
+        "body": [
+            "mui.each(${1:obj},function (${2:index},${3:element}) {",
+            "\t$0",
+            "})"
+        ],
+        "prefix": "meach",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.extend()": {
+        "body": [
+            "mui.extend(${1|'target'|},${2:'source'},${3:'deep',true,false})"
+        ],
+        "prefix": "mextend",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.fire()": {
+        "body": [
+            "mui.fire(${1:targetWebviewObj},'${2:event}',{${3:data}})"
+        ],
+        "prefix": "mfire",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.get()": {
+        "body": [
+            "mui.get('$1',{",
+            "\t\t$2",
+            "\t},function(${3:data}){",
+            "\t\t$0",
+            "\t},'${4:json}'",
+            ");"
+        ],
+        "prefix": "mget",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.getJSON()": {
+        "body": [
+            "mui.getJSON('$1',{$2},function($3){",
+            "\t\t$4",
+            "\t}",
+            ");$0"
+        ],
+        "prefix": "mjson",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.init": {
+        "body": [
+            "mui.init({$0})"
+        ],
+        "prefix": "minit",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.init({侧滑返回})": {
+        "body": [
+            "mui.init({",
+            "\tswipeBack:${1|true,false|} ",
+            ");$0"
+        ],
+        "prefix": "minswipeback",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.init({刷新组件})": {
+        "body": [
+            "mui.init({",
+            "  pullRefresh : {",
+            "    container:'#${1:refreshContainer}',",
+            "    down : {",
+            "      callback :${2:pullfresh}",
+            "    },",
+            "    up : {",
+            "      callback :${3:pullfresh} ",
+            "    }",
+            "  }",
+            "});$0"
+        ],
+        "prefix": "minpullRefresh",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.init({子页面})": {
+        "body": [
+            "mui.init({",
+            "\tsubpages:[{",
+            "\t  url:'${1:url}',",
+            "      id:'${2:id}',",
+            "      styles:{",
+            "        $3",
+            "      },",
+            "      extras:{$4}",
+            "\t}]",
+            "})$0"
+        ],
+        "prefix": "minsubpage",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.init({手势事件})": {
+        "body": [
+            "mui.init({",
+            "  \tgestureConfig:{",
+            "\t   tap: ${1|true,false|}, ",
+            "\t   doubletap: ${2|true,false|}, ",
+            "\t   longtap: ${3|true,false|}, ",
+            "\t   swipe: ${4|true,false|}, ",
+            "\t   drag: ${5|true,false|}, ",
+            "\t   hold:${6|false,true|},",
+            "\t   release:${7|false,true|}",
+            "  \t}",
+            "});$0"
+        ],
+        "prefix": "mingesture",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.init({按键绑定})": {
+        "body": [
+            "mui.init({",
+            "\tkeyEventBind: {",
+            "\t\tbackbutton: ${1|true,false|},  ",
+            "\t\tmenubutton: ${2|true,false|}   ",
+            "\t},",
+            "})"
+        ],
+        "prefix": "minkeyevent",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.init({设置状态栏颜色})": {
+        "body": [
+            "mui.init({",
+            "\tstatusBarBackground:'#${1:FFFFFF}'",
+            "})"
+        ],
+        "prefix": "minstatusbar",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.init({重写窗口关闭逻辑})": {
+        "body": [
+            "mui.init({",
+            "\tbeforeback:function () {",
+            "\t\t$0",
+            "\t}",
+            "})"
+        ],
+        "prefix": "minbeforeback",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.init({预加载})": {
+        "body": [
+            "mui.init({",
+            "\tpreloadPages:[{",
+            "\t  url:'${1:url}',",
+            "      id:'${2:id}',",
+            "      styles:{",
+            "        $3",
+            "      },",
+            "      extras:{$4}",
+            "\t}]",
+            "})$0"
+        ],
+        "prefix": "minpreload",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.init({预加载数量})": {
+        "body": [
+            "preloadLimit:${1:5}"
+        ],
+        "prefix": "minprelimit",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.later()": {
+        "body": [
+            "mui.later(function(){",
+            "\t$2  ",
+            "},${1|500,1000,1500,2000|})"
+        ],
+        "prefix": "mlater",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.mask": {
+        "body": [
+            "var ${1:mask} = mui.createMask(function () {",
+            "\t$2",
+            "})",
+            "${1:mask}.show()"
+        ],
+        "prefix": "mmask",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.off": {
+        "body": [
+            "mui('$1').off('${2:tap}','$3',function($4){",
+            "  $0",
+            "}) "
+        ],
+        "prefix": "mmoff",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.on": {
+        "body": [
+            "mui('$1').on('${2:tap}','$3',function($4){",
+            "  $0",
+            "}) "
+        ],
+        "prefix": "mmon",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.open": {
+        "body": [
+            "mui.openWindow('${1:url}','${2:id}',{$3})"
+        ],
+        "prefix": "mopen",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.os": {
+        "body": [
+            "mui.os."
+        ],
+        "prefix": "mos",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.plusReady()": {
+        "body": [
+            "mui.plusReady(function () {",
+            "    $1",
+            "})$0"
+        ],
+        "prefix": "mplusready",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.post()": {
+        "body": [
+            "mui.post('$1',{",
+            "\t\t$2",
+            "\t},function(${3:data}){",
+            "\t\t$0",
+            "\t},'${4:json}'",
+            ");"
+        ],
+        "prefix": "mpost",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.preload()": {
+        "body": [
+            "mui.preload({",
+            "\turl:'${1:url}',",
+            "\tid:'${2:id}',",
+            "\tstyles:{$3},//窗口参数",
+            "\textras:{$4}//自定义扩展参数",
+            "})$0"
+        ],
+        "prefix": "mpreload",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "mui.prompt()": {
+        "body": [
+            " mui.prompt('${1:text}','${2:defaultText}','${3:title}',['${4:取消}','${5:确认}'],function (${6:e}) {",
+            "    ${6:e}.index$0",
+            "}${7:,'div'})"
+        ],
+        "prefix": "mdprompt",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.ready": {
+        "body": [
+            "mui.ready(function () {",
+            "\t$0",
+            "})"
+        ],
+        "prefix": "mready",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.scrollTo()": {
+        "body": [
+            "mui.scrollTo(${1:ypos},${2:duration},${3:/function () {",
+            "    \t",
+            "}}$0"
+        ],
+        "prefix": "mscrollto",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.toast()": {
+        "body": [
+            "mui.toast('${1:message}')$0"
+        ],
+        "prefix": "mdtoast",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "mui.trigger()": {
+        "body": [
+            "mui.trigger(${1:dom},'${3:tap}'${4:,{a:'as'}})"
+        ],
+        "prefix": "mtrigger",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "navigator.userAgent;": {
+        "body": [
+            "navigator.userAgent"
+        ],
+        "prefix": "nuser",
+        "scope": "typescript,javascript"
+    },
+    "plus.Screen": {
+        "body": [
+            "plus.Screen."
+        ],
+        "prefix": "pScreen",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.accelerometer": {
+        "body": [
+            "plus.accelerometer."
+        ],
+        "prefix": "pacce",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.android": {
+        "body": [
+            "plus.android."
+        ],
+        "prefix": "pandroid",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.audio": {
+        "body": [
+            "plus.audio."
+        ],
+        "prefix": "paudio",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.barcode": {
+        "body": [
+            "plus.barcode."
+        ],
+        "prefix": "pbarcode",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.camera": {
+        "body": [
+            "plus.camera."
+        ],
+        "prefix": "pcamera",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.contacts": {
+        "body": [
+            "plus.contacts."
+        ],
+        "prefix": "pcontacts",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.device": {
+        "body": [
+            "plus.device."
+        ],
+        "prefix": "pdevice",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.display": {
+        "body": [
+            "plus.display."
+        ],
+        "prefix": "pdisplay",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.downloader": {
+        "body": [
+            "plus.downloader."
+        ],
+        "prefix": "pdown",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.gallery": {
+        "body": [
+            "plus.gallery."
+        ],
+        "prefix": "pgallery",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.geolocation": {
+        "body": [
+            "plus.geolocation."
+        ],
+        "prefix": "pgeolocation",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.io": {
+        "body": [
+            "plus.io."
+        ],
+        "prefix": "pio",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.ios": {
+        "body": [
+            "plus.ios."
+        ],
+        "prefix": "pios",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.key": {
+        "body": [
+            "plus.key."
+        ],
+        "prefix": "pkey",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.maps": {
+        "body": [
+            "plus.maps."
+        ],
+        "prefix": "pmaps",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.messaging": {
+        "body": [
+            "plus.messaging."
+        ],
+        "prefix": "pmessaging",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.nativeObj": {
+        "body": [
+            "plus.nativeObj."
+        ],
+        "prefix": "pnativeObj",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.nativeUI": {
+        "body": [
+            "plus.nativeUI."
+        ],
+        "prefix": "pnativeUI",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.nativeUI.alert": {
+        "body": [
+            "plus.nativeUI.alert($1)"
+        ],
+        "prefix": "pnalert",
+        "project": "uni-app,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "plus.navigator": {
+        "body": [
+            "plus.navigatorsc."
+        ],
+        "prefix": "pnavigator",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.net": {
+        "body": [
+            "plus.net."
+        ],
+        "prefix": "pnet",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.networkinfo": {
+        "body": [
+            "plus.networkinfo."
+        ],
+        "prefix": "pnetworkinfo",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.oauth": {
+        "body": [
+            "plus.oauth."
+        ],
+        "prefix": "poauth",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.orientation": {
+        "body": [
+            "plus.orientation."
+        ],
+        "prefix": "porientation",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.os": {
+        "body": [
+            "plus.os."
+        ],
+        "prefix": "pos",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.payment": {
+        "body": [
+            "plus.payment."
+        ],
+        "prefix": "ppayment",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.proximity": {
+        "body": [
+            "plus.proximity."
+        ],
+        "prefix": "pproximity",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.push": {
+        "body": [
+            "plus.push."
+        ],
+        "prefix": "ppush",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.runtime": {
+        "body": [
+            "plus.runtime."
+        ],
+        "prefix": "pruntime",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.share": {
+        "body": [
+            "plus.share."
+        ],
+        "prefix": "pshare",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.speech": {
+        "body": [
+            "plus.speech.$0"
+        ],
+        "prefix": "pspeech",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.statistic": {
+        "body": [
+            "plus.statistic."
+        ],
+        "prefix": "pstatistic",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.storage": {
+        "body": [
+            "plus.storage."
+        ],
+        "prefix": "pstorage",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.uploader": {
+        "body": [
+            "plus.uploader."
+        ],
+        "prefix": "puploader",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.webview": {
+        "body": [
+            "plus.webview."
+        ],
+        "prefix": "pweb",
+        "project": "uni-app,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plus.zip": {
+        "body": [
+            "plus.zip."
+        ],
+        "prefix": "pzip",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "plusReady": {
+        "body": [
+            "function plusReady(){",
+            "    $0",
+            "}",
+            "if (window.plus) {",
+            "    plusReady()",
+            "} else{",
+            "    document.addEventListener('plusready',plusReady,false);",
+            "}"
+        ],
+        "prefix": "pready",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "querySelector": {
+        "body": [
+            "document.querySelector('$1').$0"
+        ],
+        "prefix": "ds",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "querySelectoraddEventListener": {
+        "body": [
+            "document.querySelector('$1').addEventListener('${2:tap}',function ($3) {",
+            "        $0",
+            "})"
+        ],
+        "prefix": "dsa",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "redirectTo({...})": {
+        "body": [
+            "redirectTo({",
+            "\turl: '$1'",
+            "});$0"
+        ],
+        "prefix": "redirectTo",
+        "scope": "uni.method.js"
+    },
+    "return false": {
+        "body": [
+            "return false;"
+        ],
+        "prefix": "rfalse",
+        "scope": "typescript,javascript"
+    },
+    "return false;": {
+        "body": [
+            "return false;"
+        ],
+        "prefix": "rfalse",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "return true": {
+        "body": [
+            "return true;"
+        ],
+        "prefix": "rtrue",
+        "scope": "typescript,javascript"
+    },
+    "return true;": {
+        "body": [
+            "return true;"
+        ],
+        "prefix": "rtrue",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript"
+    },
+    "setTimeout function": {
+        "body": [
+            "setTimeout(function() {$0}, ${1:10});"
+        ],
+        "prefix": "settimeout",
+        "scope": "typescript,javascript"
+    },
+    "switch_case": {
+        "body": [
+            "switch (${1}){",
+            "\tcase ${2:value}:",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\tbreak;",
+            "}"
+        ],
+        "prefix": "switchcase",
+        "scope": "typescript,javascript"
+    },
+    "try{}catch(e)": {
+        "body": [
+            "try{",
+            "\t$0",
+            "}catch(e){",
+            "\t//TODO handle the exception",
+            "}"
+        ],
+        "prefix": "trycatch",
+        "scope": "typescript,javascript"
+    },
+    "typeof": {
+        "body": [
+            "typeof($1)==\"${2:undefined}\""
+        ],
+        "prefix": "typeoff",
+        "scope": "typescript,javascript"
+    },
+    "typeof!": {
+        "body": [
+            "typeof($1)!=\"${2:undefined}\""
+        ],
+        "prefix": "typeof!",
+        "scope": "typescript,javascript"
+    },
+    "uAlert": {
+        "body": [
+            "uni.showModal({",
+            "\tcontent: '$1',",
+            "\tshowCancel: false",
+            "});"
+        ],
+        "prefix": "ualert",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uConfirm": {
+        "body": [
+            "uni.showModal({",
+            "\tcontent: '$1',",
+            "\tsuccess: function (res) {",
+            "\t\tif (res.confirm) {",
+            "\t\t\t$2",
+            "\t\t} else if (res.cancel) {",
+            "\t\t\t$3",
+            "\t\t}",
+            "\t}",
+            "});"
+        ],
+        "prefix": "uconfirm",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uGetLocation": {
+        "body": [
+            "uni.getLocation({",
+            "\ttype: 'wgs84',",
+            "\tsuccess: res => {$0}",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "ugetlocation",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uLogin": {
+        "body": [
+            "uni.login({",
+            "\tprovider: '$1',",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "ulogin",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uNavigateBack": {
+        "body": [
+            "uni.navigateBack({",
+            "\tdelta: $1",
+            "});"
+        ],
+        "prefix": "unavigateback",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uNavigateTo": {
+        "body": [
+            "uni.navigateTo({",
+            "\turl: '$1',",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "unavigateto",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uPay": {
+        "body": [
+            "uni.requestPayment({",
+            "\tprovider: '$1',",
+            "\torderInfo: '$2',",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "upay",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uRedirectTo": {
+        "body": [
+            "uni.redirectTo({",
+            "\turl: '$1',",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "uredirectto",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uRequest": {
+        "body": [
+            "uni.request({",
+            "\turl: '$1',",
+            "\tmethod: 'GET$2',",
+            "\tdata: {$3},",
+            "\tsuccess: res => {$0},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "urequest",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uRequestPayment": {
+        "body": [
+            "uni.requestPayment({",
+            "\tprovider: '$1',",
+            "\torderInfo: '$2',",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "urequestpayment",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uShare": {
+        "body": [
+            "uni.share({",
+            "\tprovider: '$1',",
+            "\ttype: 0$2,",
+            "\ttitle: '$3',",
+            "\thref: '$4',",
+            "\timageUrl: '$5',",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "ushare",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uShowActionSheet": {
+        "body": [
+            "uni.showActionSheet({",
+            "\titemList: $1,",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "ushowactionsheet",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uShowLoading": {
+        "body": [
+            "uni.showLoading({",
+            "\ttitle: '$1',",
+            "\tmask: false",
+            "});"
+        ],
+        "prefix": "ushowloading",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uShowModal": {
+        "body": [
+            "uni.showModal({",
+            "\ttitle: '$1',",
+            "\tcontent: '$2',",
+            "\tshowCancel: false$3,",
+            "\tcancelText: '$4',",
+            "\tconfirmText: '$5',",
+            "\tsuccess: res => {$0},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "ushowmodal",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uShowToast": {
+        "body": [
+            "uni.showToast({",
+            "\ttitle: '$1'",
+            "});"
+        ],
+        "prefix": "ushowtoast",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uShowToastNoIcon": {
+        "body": [
+            "uni.showToast({",
+            "\ttitle: '$1',",
+            "\ticon: 'none'",
+            "});"
+        ],
+        "prefix": "ushowtoastnoicon",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uStartPullDownRefresh": {
+        "body": [
+            "uni.startPullDownRefresh({",
+            "\tsuccess: res => {},",
+            "\tfail: () => {},",
+            "\tcomplete: () => {}",
+            "});"
+        ],
+        "prefix": "ustartpulldownrefresh",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "uStopPullDownRefresh": {
+        "body": [
+            "uni.stopPullDownRefresh();"
+        ],
+        "prefix": "ustoppulldownrefresh",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "use strict": {
+        "body": [
+            "\"use strict\""
+        ],
+        "prefix": "use",
+        "scope": "typescript,javascript"
+    },
+    "var a=[];": {
+        "body": [
+            "var ${1:a}=[$2];"
+        ],
+        "prefix": "vara",
+        "scope": "typescript,javascript"
+    },
+    "var c = canvas": {
+        "body": [
+            "var ${2:c} = document.getElementById(\"$1\").getContext(\"2d\");"
+        ],
+        "prefix": "varc",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "var currentWebview": {
+        "body": [
+            "var currentWebview = this.\\$mp.page.\\$getAppWebview()"
+        ],
+        "prefix": "varcw",
+        "project": "uni-app",
+        "scope": "typescript,javascript"
+    },
+    "var i=0;": {
+        "body": [
+            "var ${1:i}=${2:0};"
+        ],
+        "prefix": "vari",
+        "scope": "typescript,javascript"
+    },
+    "var l=a.length;": {
+        "body": [
+            "var ${1:l}=${2:a}.length;"
+        ],
+        "prefix": "varl",
+        "scope": "typescript,javascript"
+    },
+    "var s=\"\";": {
+        "body": [
+            "var ${1:s}=\"$2\";"
+        ],
+        "prefix": "vars",
+        "scope": "typescript,javascript"
+    },
+    "var xhr": {
+        "body": [
+            "var ${1:xhr} = new XMLHttpRequest();",
+            "xhr.open(\"${2:POST}\",\"$3\",${4:true});"
+        ],
+        "prefix": "varxhr",
+        "scope": "typescript,javascript"
+    },
+    "while": {
+        "body": [
+            "while (${1:condition}){",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "whilee",
+        "scope": "typescript,javascript"
+    },
+    "windowaddEventListener": {
+        "body": [
+            "window.addEventListener('${1:scroll}',function ($2) {",
+            "        $0",
+            "})"
+        ],
+        "prefix": "wad",
+        "project": "Web,App,Wap2App",
+        "scope": "typescript,javascript",
+        "triggerAssist": true
+    },
+    "with": {
+        "body": [
+            "with ($1){",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "withh",
+        "scope": "typescript,javascript"
+    }
+}

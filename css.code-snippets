@@ -1,0 +1,398 @@
+{
+    "#ifdef": {
+        "body": [
+            "/* #ifdef ${1|APP-PLUS,MP,MP-ALIPAY,MP-BAIDU,MP-WEIXIN,MP-QQ,H5|} */",
+            "$0",
+            "/* #endif */"
+        ],
+        "prefix": "ifdef",
+        "project": "uni-app",
+        "scope": "css"
+    },
+    "#ifndef": {
+        "body": [
+            "/* #ifndef ${1|APP-PLUS,MP,MP-ALIPAY,MP-BAIDU,MP-WEIXIN,MP-QQ,H5|} */",
+            "$0",
+            "/* #endif */"
+        ],
+        "prefix": "ifndef",
+        "project": "uni-app",
+        "scope": "css"
+    },
+    "-moz-": {
+        "body": [
+            "-moz-"
+        ],
+        "prefix": "moz",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "-ms-": {
+        "body": [
+            "-ms-"
+        ],
+        "prefix": "ms",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "-webkit-": {
+        "body": [
+            "-webkit-"
+        ],
+        "prefix": "webkit",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "@-moz-keyframes": {
+        "body": [
+            "@-moz-keyframes ${1:name}{",
+            "\tfrom{$2}",
+            "\tto{$3}",
+            "}"
+        ],
+        "prefix": "@keyframes",
+        "scope": "CSS_OUTRULE"
+    },
+    "@-ms-keyframes": {
+        "body": [
+            "@-ms-keyframes ${1:name}{",
+            "\tfrom{$2}",
+            "\tto{$3}",
+            "}"
+        ],
+        "prefix": "@keyframes",
+        "scope": "CSS_OUTRULE"
+    },
+    "@-webkit-keyframes": {
+        "body": [
+            "@-webkit-keyframes ${1:name}{",
+            "\tfrom{$2}",
+            "\tto{$3}",
+            "}"
+        ],
+        "prefix": "@keyframes",
+        "scope": "CSS_OUTRULE"
+    },
+    "@charset": {
+        "body": [
+            "@charset \"${1:utf-8}\";"
+        ],
+        "prefix": "@charset",
+        "scope": "CSS_OUTRULE"
+    },
+    "@document": {
+        "body": [
+            "@document ${1:url}(\"$2\") {",
+            "\t$3",
+            "}"
+        ],
+        "prefix": "@document",
+        "scope": "CSS_OUTRULE"
+    },
+    "@font-face": {
+        "body": [
+            "@font-face {",
+            "\tfont-family:$1;",
+            "\tsrc: url($2);",
+            "}"
+        ],
+        "prefix": "@fontface",
+        "scope": "CSS_OUTRULE"
+    },
+    "@import": {
+        "body": [
+            "@import url(\"$1\");"
+        ],
+        "prefix": "@import",
+        "scope": "CSS_OUTRULE",
+        "triggerAssist": true
+    },
+    "@keyframes": {
+        "body": [
+            "@keyframes ${1:name}{",
+            "\tfrom{$2}",
+            "\tto{$3}",
+            "}"
+        ],
+        "prefix": "@keyframes",
+        "scope": "CSS_OUTRULE"
+    },
+    "@media": {
+        "body": [
+            "@media $1 {",
+            "\t$2",
+            "}"
+        ],
+        "prefix": "@media",
+        "scope": "CSS_OUTRULE"
+    },
+    "@namespace": {
+        "body": [
+            "@namespace ${1:prefix} \"$2\";"
+        ],
+        "prefix": "@namespace",
+        "scope": "CSS_OUTRULE"
+    },
+    "@page": {
+        "body": [
+            "@page:${1:first}{",
+            "\t",
+            "}"
+        ],
+        "prefix": "@page",
+        "scope": "CSS_OUTRULE"
+    },
+    "@supports": {
+        "body": [
+            "@supports(${1:prop}:${2:value}) {",
+            "\t$3",
+            "}"
+        ],
+        "prefix": "@supports",
+        "scope": "CSS_OUTRULE"
+    },
+    "background-color": {
+        "body": [
+            "background-color: $1"
+        ],
+        "prefix": "bc",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "background-color: #": {
+        "body": [
+            "background-color: #$1"
+        ],
+        "prefix": "bch",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "background-color: rgb": {
+        "body": [
+            "background-color: rgb(${1:255},${2:255},${3:255})"
+        ],
+        "prefix": "bcr",
+        "scope": "css"
+    },
+    "background-image": {
+        "body": [
+            "background-image: $1"
+        ],
+        "prefix": "bi",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "background-image: url": {
+        "body": [
+            "background-image: url($1)"
+        ],
+        "prefix": "biu",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "background-position": {
+        "body": [
+            "background-position: $1"
+        ],
+        "prefix": "bp",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "background: image repeat attachment position": {
+        "body": [
+            "background: url($1) ${2:repeat} ${3:fixed} ${4:center};$0"
+        ],
+        "prefix": "bg",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "border-color": {
+        "body": [
+            "border-color: $1"
+        ],
+        "prefix": "boc",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "border-style": {
+        "body": [
+            "border-style: $1"
+        ],
+        "prefix": "bs",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "border-width": {
+        "body": [
+            "border-width: $1"
+        ],
+        "prefix": "bw",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "display: block": {
+        "body": [
+            "display: block;"
+        ],
+        "prefix": "db",
+        "scope": "css"
+    },
+    "display: flex": {
+        "body": [
+            "display: flex;"
+        ],
+        "prefix": "df",
+        "scope": "css"
+    },
+    "display: none": {
+        "body": [
+            "display: none;"
+        ],
+        "prefix": "dn",
+        "scope": "css"
+    },
+    "flex-direction: row": {
+        "body": [
+            "flex-direction: row;"
+        ],
+        "prefix": "fdr",
+        "scope": "css"
+    },
+    "font-family: family": {
+        "body": [
+            "font-family: $1"
+        ],
+        "prefix": "ff",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "font-size: size": {
+        "body": [
+            "font-size: $1"
+        ],
+        "prefix": "fsize",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "height --status-bar-height": {
+        "body": [
+            "height: var(--status-bar-height);"
+        ],
+        "prefix": "heightstatusbar",
+        "project": "uni-app",
+        "scope": "css"
+    },
+    "height --window-bottom": {
+        "body": [
+            "height: var(--window-bottom);"
+        ],
+        "prefix": "heightwindowbottom",
+        "project": "uni-app",
+        "scope": "css"
+    },
+    "height --window-top": {
+        "body": [
+            "height: var(--window-top);"
+        ],
+        "prefix": "heightwindowtop",
+        "project": "uni-app",
+        "scope": "css"
+    },
+    "height px": {
+        "body": [
+            "height: ${1}px;$0"
+        ],
+        "prefix": "hpx",
+        "scope": "css"
+    },
+    "justify-content: center": {
+        "body": [
+            "justify-content: center;"
+        ],
+        "prefix": "jcc",
+        "scope": "css"
+    },
+    "list-style-image: url": {
+        "body": [
+            "list-style-image: url($1);"
+        ],
+        "prefix": "lsi",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "scrollbar": {
+        "body": [
+            "scrollbar-base-color:       ${1:#CCCCCC};",
+            "scrollbar-arrow-color:      ${2:#000000};",
+            "scrollbar-track-color:      ${3:#999999};",
+            "scrollbar-3dlight-color:    ${4:#EEEEEE};",
+            "scrollbar-highlight-color:  ${5:#FFFFFF};",
+            "scrollbar-face-color:       ${6:#CCCCCC};",
+            "scrollbar-shadow-color:     ${7:#999999};",
+            "scrollbar-darkshadow-color: ${8:#666666};"
+        ],
+        "prefix": "scrollbarr",
+        "scope": "css"
+    },
+    "text-align: center": {
+        "body": [
+            "text-align: center;"
+        ],
+        "prefix": "tac",
+        "scope": "css"
+    },
+    "text-align: left": {
+        "body": [
+            "text-align: left;"
+        ],
+        "prefix": "tal",
+        "scope": "css"
+    },
+    "text-align: right": {
+        "body": [
+            "text-align: right;"
+        ],
+        "prefix": "tar",
+        "scope": "css"
+    },
+    "text-transform": {
+        "body": [
+            "text-transform: $1"
+        ],
+        "prefix": "tt",
+        "scope": "css",
+        "triggerAssist": true
+    },
+    "userselect:none": {
+        "body": [
+            "-webkit-user-select: none;",
+            "-moz-user-select: none;",
+            "-ms-user-select: none;",
+            "user-select: none;"
+        ],
+        "prefix": "usn",
+        "scope": "css"
+    },
+    "width length": {
+        "body": [
+            "width: ${1}px;$0"
+        ],
+        "prefix": "widthlength",
+        "scope": "css"
+    },
+    "width upx": {
+        "body": [
+            "width: ${1}upx;$0"
+        ],
+        "prefix": "wupx",
+        "project": "uni-app",
+        "scope": "css"
+    },
+    "width_length": {
+        "body": [
+            "width: ${1}px;$0"
+        ],
+        "prefix": "wlength",
+        "scope": "css"
+    }
+}
